@@ -2,5 +2,14 @@
 layout: page
 title: "bac0id's blog"
 ---
-hello jekyll.
-20210424
+<h1>目录</h1>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
+
